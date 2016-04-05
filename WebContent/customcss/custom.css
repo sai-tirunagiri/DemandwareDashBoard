@@ -1,0 +1,63 @@
+@CHARSET "ISO-8859-1";
+<style>
+	.demo select {
+		border: 0 !important;  /*Removes border*/
+		-webkit-appearance: none;  /*Removes default chrome and safari style*/
+		-moz-appearance: none; /* Removes Default Firefox style*/
+        appearance:none;
+		background: #0088cc url(img/select-arrow.png) no-repeat 90% center;
+		width: 100px; /*Width of select dropdown to give space for arrow image*/
+		text-indent: 0.01px; /* Removes default arrow from firefox*/
+		text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+		color: #FFF;
+		border-radius: 15px;
+		padding: 5px;
+		box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+		height: 30px;
+	}
+	.demo select.balck {
+		background-color: #000;
+	}
+	.demo select.option3 {
+		border-radius: 10px 0;
+	}
+
+
+.btn1 {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 22;
+  -moz-border-radius: 22;
+  border-radius: 22px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px 11px 5px 11px;
+  text-decoration: none;
+  margin-left: 405px;
+  margin-top: 20px;
+}
+
+.btn1:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+#watermark
+{
+ position:fixed;
+ opacity:0.5;
+ z-index:99;
+ color:white;
+ right:5px;
+}
+</style>

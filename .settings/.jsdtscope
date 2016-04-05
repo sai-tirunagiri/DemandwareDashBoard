@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="META-INF/|WEB-INF/|bower_components/|bower_components/datatables/media/js/jquery.dataTables.js|customcss/|datatables/|dist/|images/|js/|less/|lib/|report/|reportPages/|src/|webcontent/|webcontent/birt/ajax/ui/dialog/AbstractBaseDialog.js|webcontent/birt/ajax/ui/report/AbstractBaseReportDocument.js|webcontent/birt/ajax/ui/report/AbstractReportComponent.js|webcontent/birt/ajax/ui/report/BirtReportDocument.js|webcontent/birt/ajax/utility/BirtPosition.js|webcontent/birt/ajax/utility/BirtUtility.js" kind="src" path="WebContent"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.WebProject">
+		<attributes>
+			<attribute name="hide" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

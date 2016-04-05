@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.5.0.v201506092134 Build &lt;@BUILD@></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">248</property>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">248</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">248</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/first_report.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="247">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://va32ldbnmft11.mot.com:3306/gaddevadhoc</property>
+            <property name="odaUser">gaddevadhoc</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">RGV2TjBWM0hvYw==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="MyDataSet" id="248">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">serial_number</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">serial_number</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">serial_number</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FileList</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FileList</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">FileList</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FolderName</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FolderName</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">FolderName</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Date</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Date</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">serial_number</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FileList</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">FolderName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Date</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">serial_number</property>
+                    <property name="nativeName">serial_number</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FileList</property>
+                    <property name="nativeName">FileList</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">FolderName</property>
+                    <property name="nativeName">FolderName</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Date</property>
+                    <property name="nativeName">DATE</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select @a:=@a+1 serial_number,FileList,FolderName,TEST_FILE_MONITOR.Date from gaddevadhoc.TEST_FILE_MONITOR,(SELECT @a:= 0) as a;]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>serial_number</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>69</design:precision>
+            <design:scale>31</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>serial_number</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>serial_number</design:label>
+            <design:formattingHints>
+              <design:displaySize>69</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FileList</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>5000</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FileList</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FileList</design:label>
+            <design:formattingHints>
+              <design:displaySize>5000</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FolderName</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FolderName</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FolderName</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DATE</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Date</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="110">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="NewStyle" id="253">
+            <property name="fontSize">small</property>
+        </style>
+        <style name="NewStyle1" id="256">
+            <property name="orphans">inherit</property>
+            <property name="widows">inherit</property>
+        </style>
+        <style name="DateStyle" id="257">
+            <property name="fontSize">xx-small</property>
+            <property name="paddingLeft">30pt</property>
+            <property name="textAlign">justify</property>
+            <property name="textIndent">15px</property>
+        </style>
+        <style name="FolderName" id="258">
+            <property name="fontSize">xx-small</property>
+            <property name="paddingLeft">50pt</property>
+            <property name="textAlign">justify</property>
+            <property name="textIndent">20px</property>
+            <property name="bidiTextDirection">ltr</property>
+        </style>
+        <style name="SerialNumber" id="259">
+            <property name="fontSize">xx-small</property>
+            <property name="paddingLeft">20pt</property>
+        </style>
+        <style name="FileList" id="260">
+            <property name="fontSize">xx-small</property>
+            <property name="marginTop">auto</property>
+            <property name="marginLeft">auto</property>
+            <property name="marginBottom">auto</property>
+            <property name="marginRight">auto</property>
+            <property name="textAlign">center</property>
+            <property name="letterSpacing">normal</property>
+            <property name="orphans">inherit</property>
+            <property name="verticalAlign">middle</property>
+            <property name="whiteSpace">normal</property>
+            <property name="widows">inherit</property>
+        </style>
+        <style name="FolderNameHeader" id="261">
+            <property name="backgroundPositionX">0%</property>
+            <property name="paddingLeft">30pt</property>
+            <property name="textIndent">30em</property>
+        </style>
+        <style name="NewStyle2" id="276">
+            <property name="height">1000px</property>
+            <property name="width">1000px</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="leftMargin">0in</property>
+            <property name="rightMargin">0in</property>
+            <property name="style">NewStyle2</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="279">
+            <property name="height">0.5104166666666666in</property>
+            <column id="280"/>
+            <row id="281">
+                <property name="height">0.5104166666666666in</property>
+                <cell id="282">
+                    <label id="245">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">x-large</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">File Stuck Report</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <grid id="272">
+            <property name="marginTop">auto</property>
+            <property name="marginLeft">auto</property>
+            <property name="marginBottom">auto</property>
+            <property name="marginRight">auto</property>
+            <property name="height">0.6875in</property>
+            <column id="273"/>
+            <row id="274">
+                <property name="height">0.6875in</property>
+                <cell id="275">
+                    <table id="163">
+                        <property name="marginLeft">0px</property>
+                        <property name="marginRight">0px</property>
+                        <property name="verticalAlign">middle</property>
+                        <property name="height">100%</property>
+                        <property name="width">8.322916666666666in</property>
+                        <property name="dataSet">MyDataSet</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">serial_number</property>
+                                <text-property name="displayName">serial_number</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["serial_number"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">FileList</property>
+                                <text-property name="displayName">FileList</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["FileList"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">FolderName</property>
+                                <text-property name="displayName">FolderName</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["FolderName"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Date</property>
+                                <text-property name="displayName">Date</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                        </list-property>
+                        <structure name="toc"/>
+                        <property name="pageBreakInterval">50</property>
+                        <column id="187">
+                            <property name="width">0.7291666666666666in</property>
+                        </column>
+                        <column id="188">
+                            <property name="width">3.7708333333333335in</property>
+                        </column>
+                        <column id="189">
+                            <property name="width">2.2916666666666665in</property>
+                        </column>
+                        <column id="190">
+                            <property name="width">1.53125in</property>
+                        </column>
+                        <header>
+                            <row id="164">
+                                <property name="height">0.3229166666666667in</property>
+                                <cell id="165">
+                                    <label id="166">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontWeight">bold</property>
+                                        <text-property name="text">Sl. no</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="167">
+                                    <label id="168">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontWeight">bold</property>
+                                        <text-property name="text">File Name</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="169">
+                                    <label id="170">
+                                        <property name="style">FolderNameHeader</property>
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontWeight">bold</property>
+                                        <text-property name="text">Stucked in Directory</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="171">
+                                    <label id="172">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontWeight">bold</property>
+                                        <text-property name="text">DateTime</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="173">
+                                <property name="height">0.2708333333333333in</property>
+                                <cell id="174">
+                                    <data id="249">
+                                        <property name="style">SerialNumber</property>
+                                        <property name="resultSetColumn">serial_number</property>
+                                    </data>
+                                </cell>
+                                <cell id="176">
+                                    <data id="250">
+                                        <property name="style">FileList</property>
+                                        <property name="resultSetColumn">FileList</property>
+                                    </data>
+                                </cell>
+                                <cell id="178">
+                                    <data id="251">
+                                        <property name="style">FolderName</property>
+                                        <property name="resultSetColumn">FolderName</property>
+                                    </data>
+                                </cell>
+                                <cell id="180">
+                                    <data id="252">
+                                        <property name="style">DateStyle</property>
+                                        <property name="resultSetColumn">Date</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
