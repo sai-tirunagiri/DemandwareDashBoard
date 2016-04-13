@@ -106,7 +106,9 @@
                     <ul class="nav" id="side-menu">
                         <li><a href="home.jsp"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
 						<li><a href="page1.jsp"><i class="fa fa-bar-chart-o fa-fw"></i> Historical Analysis</a></li>
-						<li><a href="page4.jsp"><i class="glyphicon glyphicon-stats"></i> Reports</a></li>                     	
+						<li><a href="page4.jsp"><i class="glyphicon glyphicon-stats"></i> Reports</a></li>
+                        
+                     	
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
