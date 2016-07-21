@@ -80,6 +80,7 @@ public class DashBoardDAO {
 				GetFileList getFileList = new GetFileList();
 				getFileList.setFileList(resultSet.getString(1));
 				getFileLists.add(getFileList);
+				
 			}
 			
 		} catch (SQLException e) {

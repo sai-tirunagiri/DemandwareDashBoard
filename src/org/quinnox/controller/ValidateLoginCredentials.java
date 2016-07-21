@@ -23,7 +23,7 @@ public class ValidateLoginCredentials extends HttpServlet {
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		if(userName.equalsIgnoreCase("dashboard")&&password.equalsIgnoreCase("dashboard")){
+		if(userName.equalsIgnoreCase("admin")&&password.equalsIgnoreCase("admin")){
 			response.sendRedirect("home.jsp");
 		}
 		else
